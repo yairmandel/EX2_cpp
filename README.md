@@ -21,8 +21,7 @@ Test.cpp – Unit tests using the doctest framework.
 Makefile – Build system for running demo, tests, and memory checks.
 
  Build & Run
-
-Make sure you have g++ and valgrind installed.
+ 
 
 Build and run demo:
 
