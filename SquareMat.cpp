@@ -30,6 +30,8 @@ SquareMat::SquareMat(const std::vector<std::vector<double>>& values) {
     size = n;
     data = values;
 }
+
+//get size
 int SquareMat::getSize() const{
     return size;
 }
@@ -262,6 +264,21 @@ bool SquareMat::operator<(const SquareMat& other) const {
     return this->sumElements() < other.sumElements();
 }
 
+//A <= B
+bool SquareMat::operator<=(const SquareMat& other) const {
+    return *this < other || *this == other;
+}
+
+//A>B
+bool SquareMat::operator>(const SquareMat& other) const {
+    return !(*this <= other);
+}
+
+// A >= B
+bool SquareMat::operator>=(const SquareMat& other) const {
+    return !(*this < other);
+}
+
 //A+=B -> A=A+B
 SquareMat& SquareMat::operator+=(const SquareMat& other) {
     if (size != other.size) {
@@ -371,19 +388,6 @@ SquareMat& SquareMat::operator%=(const SquareMat& other) {
     }
 
     return *this;
-}
-
-//A>B
-bool SquareMat::operator<=(const SquareMat& other) const {
-    return *this < other || *this == other;
-}
-//A <= B
-bool SquareMat::operator>(const SquareMat& other) const {
-    return !(*this <= other);
-}
-// A >= B
-bool SquareMat::operator>=(const SquareMat& other) const {
-    return !(*this < other);
 }
 
 //transpose
