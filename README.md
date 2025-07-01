@@ -1,6 +1,7 @@
 SquareMat Project
 
 Author: Yair Mandel
+
 Email: yair340@gmail.com
 
 Overview
